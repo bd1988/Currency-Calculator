@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.container {
+    width: 100%;
+    max-width: 84.375rem;           //1350px
+    margin: 0 auto;    
+}
+.background {
+    background-image: url(../../images/back.jpg);
+    @media only screen and (max-width: 600px) {
+        background-size: cover; 
+       }
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;  
+}
+header {
+    height: 3.125rem;
+    background-color:rgba(249, 250, 250, 0.5);
+    box-shadow: 0px 3px 6px #00000029;
+    line-height: 3.125rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(36, 101, 187);
+}
+h1 {
+    @media only screen and (max-width: 600px) {
+        font-size: 1.5rem;
+    }
+    @media only screen and (min-width: 601px) {
+        font-size: 3rem;
+    }
+}
+p.logo {
+    @media only screen and (max-width: 600px) {
+       font-size: 1rem;
+   }
+   @media only screen and (min-width: 601px) {
+       font-size: 1.5rem;
+   }
+    margin: 0.5rem;
+    display: inline;
+    padding: 0.2rem 1rem;
+    border: 1px solid rgb(26, 83, 158);
+    border-radius: 2rem;
+    color: orange;
+    letter-spacing: 2px;
+    background-color: rgba(36, 101, 187, 0.5);
+}
+main {
+    height: 100%;
+    min-height: calc(100vh - 4.625rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer {
+    height: 1.5rem;
+    background-color:rgba(191, 197, 197, 0.3);
+    box-shadow: 0px 3px 25px #00000029;
+    color: rgb(36, 101, 187);
+    
+}
+.big-box {
+    @media only screen and (max-width: 600px) {
+         width: calc(100% - 2rem); 
+        }
+    @media only screen and (min-width: 601px) {
+        width: calc(100% - 2rem);
+        max-width: 65rem;          
+    }
+    margin: 0 auto;
+    border: 1px solid darkgrey;
+    border-radius: 1rem;
+}
+.calculator {    
+    p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.7rem;
+    color: rgb(36, 101, 187);
+    }
+    input {
+        @media only screen and (max-width: 600px) {
+            width: 10rem;
+            height: 2.5rem;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        @media only screen and (min-width: 601px) {
+            width: 36.5rem;
+            height: 5rem;
+            font-size: 3rem;
+        }        
+        border: 1px solid darkgray;
+        border-radius: 0.8rem;
+        text-align: center;
+        font-weight: 700;
+        background-color:rgba(150, 150, 150, 0.1);
+        box-shadow: 0px 3px 6px #00000029;       
+    }
+    input::placeholder{
+        color: black;
+    }
+    select {
+        @media only screen and (max-width: 600px) {
+            width: 15rem;
+            height: 2.5rem;
+            margin-bottom: 0.4rem;
+           }
+        @media only screen and (min-width: 601px) {
+            width: 30rem;
+            height: 5rem;
+        }        
+        border: 1px solid darkgray;
+        border-radius: 0.8rem;
+        text-align: center;
+        padding-left: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 1rem;
+        background-color:rgba(150, 150, 150, 0.5);
+        }
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; 
+   box-shadow: 3px 3px 10px #00000029;
+   background-color:rgba(150, 150, 150, 0.5);
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+button {
+    @media only screen and (max-width: 600px) {
+        width: 7rem;
+        height: 2rem;
+        border-radius: 0.8rem;
+        font-size: 1rem;        
+        letter-spacing: 1.5px;
+       }
+    @media only screen and (min-width: 601px) {
+        width: 14rem;
+        height: 4rem;
+        border-radius: 1.6rem;
+        font-size: 2rem;        
+        letter-spacing: 3px;
+    }  
+    width: 7rem;
+    height: 2rem;
+    border: 1px solid rgb(26, 83, 158);    
+    background-color: rgb(36, 101, 187);
+    margin: 0.7rem;
+    box-shadow: 3px 3px 10px #00000029;
+    color: orange;
+    font-weight: 900;
+}
+.reverse {
+    @media only screen and (max-width: 600px) {
+        width: 4.5rem;
+        height: auto;
+       }
+    @media only screen and (min-width: 601px) {
+        width: 6rem;
+        height: auto;
+    }
+    cursor: pointer;
+}
+.result {
+    margin: 1rem;
+}
+.diagrams {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    box-shadow: 3px 3px 10px #00000029;
+    background-color:rgba(150, 150, 150, 0.5);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.from, .to {
+    @media only screen and (max-width: 600px) {
+        justify-content: space-between;
+        margin: 0;
+    }
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    margin: 1rem;
+}
+.flag-to, .flag-from, .from-select, .to-select {
+    display: inline-block;
+}
+.flag-to, .flag-from {
+    img {
+        @media only screen and (max-width: 600px) {
+            width: 2.5rem;
+            height: auto;
+        }
+        @media only screen and (min-width: 601px) {
+            width: 5rem;
+            height: auto;
+        }
+    }
+}
+.result {
+    display: none;
+}
+p.converted-sum {
+    @media only screen and (max-width: 600px) {
+        font-size: 1.5rem;
+       }
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+p.converted {
+    @media only screen and (max-width: 600px) {
+        font-size: 1rem;
+       }
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+p.date {
+    @media only screen and (max-width: 600px) {
+        font-size: 0.75rem;
+       }
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: orange;
+}
+.diagram {
+    width: 60rem;
+    height: 400px;
+    margin: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    background-color: white;
+   .day1 {
+       width: 50%;
+       height: 100px;
+       background-color: green;
+   }
+   .day2 {
+       width: 50%;
+       height: 30px;
+       background-color: red;       
+   }
+}
