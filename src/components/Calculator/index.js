@@ -9,13 +9,13 @@ import {Reverse} from "./reverse";
 
 
 
-export default function Calculator() {
+export default function Calculator(props) {
     const [exchangeRates, setExchangeRates] = useState("");
     const [amount, setAmount] = useState("");
     const [from, setFrom] = useState("USD");
     const [to, setTo] = useState("JPY");
     const [date, setDate] = useState("");
-    console.log(exchangeRates)
+   
 
     const handleSetExchangeRates = (currencyA, currencyB) => {
       let key = "";
@@ -31,10 +31,14 @@ export default function Calculator() {
           })
          .then( resp => {
             setExchangeRates(resp["Realtime Currency Exchange Rate"]["5. Exchange Rate"]);
-            setDate(resp["Realtime Currency Exchange Rate"]["6. Last Refreshed"]);
-            console.log(date)
+            setDate(resp["Realtime Currency Exchange Rate"]["6. Last Refreshed"]);            
           })
     }
+
+    useEffect(() => {
+      props.getCurrency(from, to);
+    });
+
     const handleSetAmount = (quantity) => {
       setAmount(quantity);
     }

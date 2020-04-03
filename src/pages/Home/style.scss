@@ -238,22 +238,32 @@ p.date {
   text-align: center;
   color: orange;
 }
-.diagram {
-    width: 60rem;
-    height: 400px;
-    margin: 2rem;
-    display: flex;
-    justify-content: start;
-    align-items: flex-end;
-    background-color: white;
-   .day1 {
-       width: 50%;
-       height: 100px;
-       background-color: green;
-   }
-   .day2 {
-       width: 50%;
-       height: 30px;
-       background-color: red;       
-   }
+// charts styles
+.chart {
+    border: 1px solid gray;
+    background-color: whitesmoke;
+    width: 1326px;
+    height: 600px;
+    margin: 20px auto;
+    position: relative;
+}
+.stick {
+    display: inline-block;
+    width: 1px;
+    position: absolute;
+}
+.candle {
+    display: inline-block;
+    position: absolute;
+    margin-left: 1px;
+    margin-right: 1px;
+    border: 1px solid;    
+}
+.up {
+    border-color: green;
+    background-color: yellowgreen;
+}
+.down {
+    border-color: red;
+    background-color: tomato;
 }
